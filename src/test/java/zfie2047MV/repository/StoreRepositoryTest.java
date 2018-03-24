@@ -13,5 +13,7 @@ public class StoreRepositoryTest {
         p.setCode(8);
         p.setCategory("alimente");
         p.setQuantity(10);
+
+
     }
 }
