@@ -34,7 +34,7 @@ public class StoreRepository {
 	}
 
 	public String addNewProduct(Product p) throws IOException{
-		if(p.getCode()>0 && p.getQuantity()>=0 && p.getCode()<Integer.MAX_VALUE&&p.getQuantity()<Integer.MAX_VALUE&& !illegal(p.getName())){
+		if(p.getCode()>0 && p.getQuantity()>=0 && p.getCode()<Integer.MAX_VALUE&&p.getQuantity()<Integer.MAX_VALUE && !illegal(p.getName()) && !illegal(p.getCategory())){
 			BufferedWriter out = new BufferedWriter(new FileWriter("products.txt",true));
 			int k=1;
 			for(Product i:allProducts){
@@ -63,9 +63,10 @@ public class StoreRepository {
 
 	private boolean illegal(String name) {
 		char c;
+		if (name.length() == 0) return true;
 		for(int i=0;i<name.length();++i) {
 			c = name.charAt(i);
-			if (!((c <= 'z' && c >= 'a') || (c <= 'Z' && c >= 'A')|| (c <= '9' && c >= '1')))
+			if (!(c == ' ' || (c <= 'z' && c >= 'a') || (c <= 'Z' && c >= 'A')|| (c <= '9' && c >= '1')))
 				return true;
 		}
 		return false;
