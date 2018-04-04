@@ -25,7 +25,6 @@ public class StoreController {
 			if (p == null) return;
 			io.addNewProduct(p);
 		} catch (NumberFormatException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		catch(IOException e){
