@@ -349,7 +349,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.StoreControllerTest.stockSituation">
+  <component name="RunManager" selected="JUnit.StoreControllerTest">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
     </configuration>
@@ -531,11 +531,11 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.StoreControllerTest" />
         <item itemvalue="JUnit.StoreControllerTest.stockSituation" />
         <item itemvalue="JUnit.zfie2047MV.controller in zfie2047_bbt" />
         <item itemvalue="JUnit.StoreControllerTest.stockSituationProduct" />
         <item itemvalue="JUnit.zfie2047MV.repository in zfie2047_bbt" />
-        <item itemvalue="JUnit.StoreControllerTest" />
       </list>
     </recent_temporary>
   </component>
