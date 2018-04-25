@@ -69,4 +69,39 @@ public class StoreControllerTest {
 
         Assert.assertTrue(controller.getProductsCategory(null).size() == 0);
     }
+
+    @Test
+    public void stockSituationProduct(){
+        StoreController controller = new StoreController();
+        controller.readProducts("products.txt");
+
+        Assert.assertTrue(controller.stockSituationProduct("lapte").size() > 0);
+    }
+
+    @Test
+    public void stockSituationProductInvalid(){
+        StoreController controller = new StoreController();
+        controller.readProducts("products.txt");
+
+        Assert.assertTrue(controller.stockSituationProduct(null).size() == 0);
+    }
+
+    @Test
+    public void stockSituation(){
+        StoreController controller = new StoreController();
+        controller.readProducts("products.txt");
+
+        Assert.assertNotEquals(0, controller.stockSituation().size());
+    }
+
+    @Test
+    public void bigBang(){
+        addProduct();
+        addProductInvalid();
+        getProductsCategory();
+        getProductsCategoryInvalid();
+        stockSituationProduct();
+        stockSituationProductInvalid();
+        stockSituation();
+    }
 }

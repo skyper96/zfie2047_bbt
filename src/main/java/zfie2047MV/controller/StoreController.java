@@ -12,7 +12,6 @@ public class StoreController {
 			if(f == null || f == "") return;
 			io.readFile(f);
 		} catch (NumberFormatException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		catch(IOException e){
