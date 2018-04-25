@@ -96,16 +96,21 @@ public class StoreControllerTest {
 
     @Test
     public void bigBang(){
-        StoreController controller = new StoreController();
-        controller.readProducts("products.txt");
+        addProduct();
+        getProductsCategory();
+        stockSituationProduct();
+    }
 
-        Product p = new Product();
-        p.setCategory("aliment");
-        p.setName("lapte");
-        controller.addProduct(p);
+    @Test
+    public void incrementalSecond(){
+        addProduct();
+        getProductsCategory();
+    }
 
-        Assert.assertTrue(controller.getProductsCategory("aliment").size() > 0);
-        Assert.assertNotEquals(0, controller.stockSituation().size());
-        Assert.assertTrue(controller.stockSituationProduct("lapte").size() > 0);
+    @Test
+    public void incrementalThird(){
+        addProduct();
+        getProductsCategory();
+        stockSituationProduct();
     }
 }
